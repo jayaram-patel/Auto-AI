@@ -1,0 +1,24 @@
+{
+  "name": "auto-ai",
+  "author": {
+    "name": "Yashraj Narke"
+  },
+  "workspaces": [
+    "apps/*"
+  ],
+  "license": "Apache-2.0",
+  "scripts": {
+    "prebuild": "cd apps/server && bunx prisma generate",
+    "dev:server": "cd apps/server && bun dev",
+    "dev:web": "cd apps/web && bun dev",
+    "dev": "concurrently  --names \"server,web\" \"bun run dev:server\" \"bun run dev:web\"",
+    "db:generate": "cd apps/server && bunx prisma generate "
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.0"
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e",
+  "dependencies": {
+    "fast-check": "^4.3.0"
+  }
+}

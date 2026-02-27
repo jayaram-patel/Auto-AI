@@ -1,0 +1,32 @@
+{
+  "name": "auto-ai-server",
+  "version": "1.0.0",
+  "module": "index.ts",
+  "type": "module",
+  "private": false,
+  "scripts": {
+    "dev": "bun run --watch index.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "trpc-ui": "^1.0.15"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@langchain/core": "^0.3.0",
+    "@langchain/google-genai": "^0.2.16",
+    "@prisma/client": "^6.13.0",
+    "@trpc/server": "^11.4.4",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/jsonwebtoken": "^9.0.10",
+    "chalk": "^5.5.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "prisma": "^6.13.0",
+    "zod": "^4.0.15"
+  }
+}
